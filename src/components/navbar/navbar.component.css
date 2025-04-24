@@ -1,0 +1,18 @@
+.nav {
+    background-color: #1d405c;
+}
+
+.nav-link {
+    color: white; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,  border-radius 0.3s ease, transform 0.3s ease;
+    /*Esta linea indique que lo que se animara es el background color y tambien su boxshadow y el transform que hacemos abajo*/
+    font-size: 1.2rem;;
+}
+
+.nav-link:hover {
+    background-color: #0090e8; 
+    box-shadow: 0 4px 15px rgba(0, 120, 190, 0.5); 
+    border-radius: 1.5rem; 
+    transform: scale(1.05); 
+}
+

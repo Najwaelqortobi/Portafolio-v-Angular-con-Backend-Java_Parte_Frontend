@@ -1,0 +1,34 @@
+<div class="container d-flex justify-content-center mt-5 mb-5">
+    <div class="contenido pt-5 pb-5 px-4">
+      <p>Si deseas discutir un proyecto o tienes alguna pregunta ¡no dudes en contactarme!</p>
+      <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="datos.nombre" required>
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="datos.apellido" required>
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="datos.email" required>
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" name="mensaje" id="mensaje" rows="4" [(ngModel)]="datos.mensaje" required></textarea>
+        </div>
+        <div class="buton-submit mt-4 mb-">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+  
+      <div *ngIf="mensajeEnviado" class="alert alert-success mt-3">
+        ¡Mensaje enviado correctamente!
+      </div>
+      <div *ngIf="errorEnvio" class="alert alert-danger mt-3">
+        Error al enviar el mensaje. Intenta de nuevo.
+      </div>
+    </div>
+  </div>
+  
